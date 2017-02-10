@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
 var drawing_component_1 = require('./drawing/drawing.component');
+var login_component_1 = require('./login/login.component');
 var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
     function AppModule() {
@@ -20,7 +21,7 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routing_module_1.AppRoutingModule],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, drawing_component_1.DrawingComponent],
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, drawing_component_1.DrawingComponent, login_component_1.LoginComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var home_component_1 = require('./home/home.component');
 var drawing_component_1 = require('./drawing/drawing.component');
+var login_component_1 = require('./login/login.component');
 var routes = [
     {
         path: 'home',
@@ -20,6 +21,10 @@ var routes = [
     {
         path: 'drawing',
         component: drawing_component_1.DrawingComponent
+    },
+    {
+        path: 'login',
+        component: login_component_1.LoginComponent
     },
     {
         path: '',
