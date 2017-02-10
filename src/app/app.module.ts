@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { AppComponent }  from './app.component'
 import {HomeComponent} from './home/home.component'
+import {DrawingComponent} from './drawing/drawing.component'
 import {AppRoutingModule} from './app-routing.module'
 
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule ],
-  declarations: [ AppComponent, HomeComponent ],
+  declarations: [ AppComponent, HomeComponent, DrawingComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
