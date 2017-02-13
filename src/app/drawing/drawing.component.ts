@@ -10,9 +10,9 @@ import {DrawingService} from './drawing.service'
 
 export class DrawingComponent {
 
-    draw(event: click): void {
+    draw(event: any): void {
 
-        var myCanvas = document.getElementById('myCanvas')
+        var myCanvas : any = document.getElementById('myCanvas')
         var ctx = myCanvas.getContext('2d')
 
         var canvasLocation = myCanvas.getBoundingClientRect()
