@@ -22,11 +22,15 @@ var DrawingComponent = (function () {
         console.log(shapeNode);
         return shapeNode[0].attributes.name.nodeValue;
     };
-    DrawingComponent.prototype.draw = function () {
+    DrawingComponent.prototype.draw = function (event) {
         var myCanvas = document.getElementById('groupCanvas');
         var ctx = myCanvas.getContext('2d');
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(0, 0, 150, 75);
+        var canvasLocation = myCanvas.getBoundingClientRect();
+        console.log(canvasLocation);
+        var x = event.clientX - canvasLocation.left;
+        var y = event.clientY - canvasLocation.top;
+        console.log(x, y);
+        ctx.fillRect(x, y, 5, 5);
     };
     DrawingComponent = __decorate([
         core_1.Component({

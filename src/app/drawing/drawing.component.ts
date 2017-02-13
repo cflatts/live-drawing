@@ -22,11 +22,22 @@ export class DrawingComponent implements OnInit {
         return shapeNode[0].attributes.name.nodeValue
     }
 
-    draw(): void {
+    draw(event: click): void {
+
         var myCanvas = document.getElementById('groupCanvas')
         var ctx = myCanvas.getContext('2d')
-        ctx.fillStyle = "#FF0000"
-        ctx.fillRect(0,0,150,75)
-    }
 
+        var canvasLocation = myCanvas.getBoundingClientRect()
+        console.log(canvasLocation)
+
+        const x = event.clientX - canvasLocation.left
+        const y = event.clientY - canvasLocation.top
+
+        console.log(x, y)
+
+        ctx.fillRect(x, y, 5, 5)
+    }
 }
+
+
+
