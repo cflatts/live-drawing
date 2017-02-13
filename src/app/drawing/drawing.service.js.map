@@ -1,0 +1,1 @@
+{"version":3,"file":"drawing.service.js","sourceRoot":"","sources":["drawing.service.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAyB,eAEzB,CAAC,CAFuC;AAIxC;IAAA;IAMA,CAAC;IAJG,oCAAW,GAAX;QACI,IAAI,KAAK,GAAG,QAAQ,CAAC,iBAAiB,EAAE,CAAA;QACxC,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAA;IACtB,CAAC;IAPL;QAAC,iBAAU,EAAE;;sBAAA;IAQb,qBAAC;AAAD,CAAC,AAND,IAMC;AANY,sBAAc,iBAM1B,CAAA"}

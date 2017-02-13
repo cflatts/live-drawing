@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import {DrawingService} from './drawing.service'
-var DrawingComponent = (function () {
-    function DrawingComponent() {
+var DrawingService = (function () {
+    function DrawingService() {
     }
-    DrawingComponent.prototype.selectColor = function (name) {
-        var colorNode = document.getElementsByName(name);
-        return colorNode[0].attributes.name.nodeValue;
+    DrawingService.prototype.selectColor = function () {
+        var color = document.getElementsByName();
+        console.log(color);
     };
-    DrawingComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'my-drawing',
-            templateUrl: './drawing.component.html',
-            styleUrls: ['./drawing.component.css']
-        }), 
+    DrawingService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], DrawingComponent);
-    return DrawingComponent;
+    ], DrawingService);
+    return DrawingService;
 }());
-exports.DrawingComponent = DrawingComponent;
-//# sourceMappingURL=drawing.component.js.map
+exports.DrawingService = DrawingService;
+//# sourceMappingURL=drawing.service.js.map

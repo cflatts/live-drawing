@@ -1,4 +1,5 @@
-import {Component} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
+// import {DrawingService} from './drawing.service'
 
 @Component({
     moduleId: module.id,
@@ -7,4 +8,10 @@ import {Component} from '@angular/core'
     styleUrls: ['./drawing.component.css']
 })
 
-export class DrawingComponent {}
+export class DrawingComponent implements OnInit {
+
+    selectColor(name): void {
+        var colorNode = document.getElementsByName(name)
+        return colorNode[0].attributes.name.nodeValue
+    }
+}

@@ -8,9 +8,12 @@ import {LoginComponent} from './login/login.component'
 
 import {AppRoutingModule} from './app-routing.module'
 
+import {DrawingService} from './drawing/drawing.service'
+
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule ],
   declarations: [ AppComponent, HomeComponent, DrawingComponent, LoginComponent ],
+  providers: [DrawingService]
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
