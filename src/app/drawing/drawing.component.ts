@@ -28,12 +28,9 @@ export class DrawingComponent implements OnInit {
         var ctx = myCanvas.getContext('2d')
 
         var canvasLocation = myCanvas.getBoundingClientRect()
-        console.log(canvasLocation)
 
         const x = event.clientX - canvasLocation.left
         const y = event.clientY - canvasLocation.top
-
-        console.log(x, y)
 
         ctx.fillRect(x, y, 5, 5)
     }

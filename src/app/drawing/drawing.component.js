@@ -26,10 +26,8 @@ var DrawingComponent = (function () {
         var myCanvas = document.getElementById('groupCanvas');
         var ctx = myCanvas.getContext('2d');
         var canvasLocation = myCanvas.getBoundingClientRect();
-        console.log(canvasLocation);
         var x = event.clientX - canvasLocation.left;
         var y = event.clientY - canvasLocation.top;
-        console.log(x, y);
         ctx.fillRect(x, y, 5, 5);
     };
     DrawingComponent = __decorate([
