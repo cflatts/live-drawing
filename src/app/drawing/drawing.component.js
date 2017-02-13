@@ -17,6 +17,10 @@ var DrawingComponent = (function () {
         var colorNode = document.getElementsByName(name);
         return colorNode[0].attributes.name.nodeValue;
     };
+    DrawingComponent.prototype.selectShape = function (name) {
+        var shapeNode = document.getElementsByName(name);
+        return shapeNode[0].attributes.name.nodeValue;
+    };
     DrawingComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

@@ -10,11 +10,12 @@
         <div my-drawing class = 'color white' name = 'white' (click) = 'selectColor("white")'></div>
     </div>
     <div class = 'drawingShapes'>
-        <div class = 'shape line'>Line</div>
-        <div class = 'shape circle'>Circ</div>
-        <div class = 'shape rectangle'>Rect</div>
-        <div class = 'shape triangle'>Tri</div>
-        <div class = 'shape freestyle'>Free</div>
+        <div class = 'shape line' name = 'line' (click) = 'selectShape("line")'>Line</div>
+        <div class = 'shape circle' name = 'circle'(click) = 'selectShape("circle")'>Circ</div>
+        <div class = 'shape rectangle' name = 'rectangle' (click) = 'selectShape("rectangle")'>Rect</div>
+        <div class = 'shape triangle' name = 'triangle' (click) = 'selectShape("triangle")'>Tri</div>
+        <div class = 'shape freestyle' name = 'freestyle' (click) = 'selectShape("freestyle")'>Free</div>
+        <div class = 'shape erase' name = 'erase' (click) = 'selectShape("erase")'>Erase</div>
     </div>
     <canvas id = 'groupCanvas' width = '1200' height = '600'>
     </canvas>

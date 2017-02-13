@@ -14,4 +14,9 @@ export class DrawingComponent implements OnInit {
         var colorNode = document.getElementsByName(name)
         return colorNode[0].attributes.name.nodeValue
     }
+
+    selectShape(name): void {
+        var shapeNode = document.getElementsByName(name)
+         return shapeNode[0].attributes.name.nodeValue
+    }
 }
