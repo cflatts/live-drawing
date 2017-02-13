@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core'
 
 @Injectable()
-
 export class DrawingService {
+    logs: string[] = []
 
-    selectColor(): void {
-        var color = document.getElementsByName()
-        console.log(color)
+    log(message: string) {
+        this.logs.psuh(message)
+        onsole.log(message)
     }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core'
-// import {DrawingService} from './drawing.service'
+import {DrawingService} from './drawing.service'
 
 @Component({
     moduleId: module.id,
@@ -10,13 +10,23 @@ import {Component, OnInit} from '@angular/core'
 
 export class DrawingComponent implements OnInit {
 
-    selectColor(name): void {
+    selectColor(name): string {
         var colorNode = document.getElementsByName(name)
+        console.log(colorNode)
         return colorNode[0].attributes.name.nodeValue
     }
 
-    selectShape(name): void {
+    selectShape(name): string {
         var shapeNode = document.getElementsByName(name)
-         return shapeNode[0].attributes.name.nodeValue
+        console.log(shapeNode)
+        return shapeNode[0].attributes.name.nodeValue
     }
+
+    draw(): void {
+        var myCanvas = document.getElementById('groupCanvas')
+        var ctx = myCanvas.getContext('2d')
+        ctx.fillStyle = "#FF0000"
+        ctx.fillRect(0,0,150,75)
+    }
+
 }

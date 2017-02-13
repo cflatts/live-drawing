@@ -9,17 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import {DrawingService} from './drawing.service'
 var DrawingComponent = (function () {
     function DrawingComponent() {
     }
     DrawingComponent.prototype.selectColor = function (name) {
         var colorNode = document.getElementsByName(name);
+        console.log(colorNode);
         return colorNode[0].attributes.name.nodeValue;
     };
     DrawingComponent.prototype.selectShape = function (name) {
         var shapeNode = document.getElementsByName(name);
+        console.log(shapeNode);
         return shapeNode[0].attributes.name.nodeValue;
+    };
+    DrawingComponent.prototype.draw = function () {
+        var myCanvas = document.getElementById('groupCanvas');
+        var ctx = myCanvas.getContext('2d');
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
     };
     DrawingComponent = __decorate([
         core_1.Component({

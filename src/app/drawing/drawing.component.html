@@ -1,13 +1,13 @@
 <div class = 'drawingArea'>
     <div class = 'drawingColors'>
-        <div my-drawing class = 'color red' name = 'red' (click) = 'selectColor("red")'></div>
-        <div my-drawing class = 'color orange' name = 'orange' (click) = 'selectColor("orange")'></div>
-        <div my-drawing class = 'color yellow' name = 'yellow' (click) = 'selectColor("yellow")'></div>
-        <div my-drawing class = 'color green' name = 'green' (click) = 'selectColor("green")'></div>
-        <div my-drawing class = 'color blue' name = 'blue' (click) = 'selectColor("blue")'></div>
-        <div my-drawing class = 'color purple' name = 'purple' (click) = 'selectColor("purple")'></div>
-        <div my-drawing class = 'color black' name = 'black' (click) = 'selectColor("black")'></div>
-        <div my-drawing class = 'color white' name = 'white' (click) = 'selectColor("white")'></div>
+        <div class = 'color red' name = 'red' (click) = 'selectColor("red")'></div>
+        <div class = 'color orange' name = 'orange' (click) = 'selectColor("orange")'></div>
+        <div class = 'color yellow' name = 'yellow' (click) = 'selectColor("yellow")'></div>
+        <div class = 'color green' name = 'green' (click) = 'selectColor("green")'></div>
+        <div class = 'color blue' name = 'blue' (click) = 'selectColor("blue")'></div>
+        <div class = 'color purple' name = 'purple' (click) = 'selectColor("purple")'></div>
+        <div class = 'color black' name = 'black' (click) = 'selectColor("black")'></div>
+        <div class = 'color white' name = 'white' (click) = 'selectColor("white")'></div>
     </div>
     <div class = 'drawingShapes'>
         <div class = 'shape line' name = 'line' (click) = 'selectShape("line")'>Line</div>
@@ -17,6 +17,6 @@
         <div class = 'shape freestyle' name = 'freestyle' (click) = 'selectShape("freestyle")'>Free</div>
         <div class = 'shape erase' name = 'erase' (click) = 'selectShape("erase")'>Erase</div>
     </div>
-    <canvas id = 'groupCanvas' width = '1200' height = '600'>
+    <canvas id = 'groupCanvas' width = '1200' height = '600' (click) = 'draw()'>
     </canvas>
 </div>
