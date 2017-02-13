@@ -12,18 +12,8 @@ var core_1 = require('@angular/core');
 var DrawingComponent = (function () {
     function DrawingComponent() {
     }
-    DrawingComponent.prototype.selectColor = function (name) {
-        var colorNode = document.getElementsByName(name);
-        console.log(colorNode);
-        return colorNode[0].attributes.name.nodeValue;
-    };
-    DrawingComponent.prototype.selectShape = function (name) {
-        var shapeNode = document.getElementsByName(name);
-        console.log(shapeNode);
-        return shapeNode[0].attributes.name.nodeValue;
-    };
     DrawingComponent.prototype.draw = function (event) {
-        var myCanvas = document.getElementById('groupCanvas');
+        var myCanvas = document.getElementById('myCanvas');
         var ctx = myCanvas.getContext('2d');
         var canvasLocation = myCanvas.getBoundingClientRect();
         var x = event.clientX - canvasLocation.left;

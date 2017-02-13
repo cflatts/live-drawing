@@ -3,7 +3,7 @@ import {Component} from '@angular/core'
 @Component({
     moduleId: module.id,
     selector: 'my-login',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
     styleUrls: ['./login.component.css']
 })
 

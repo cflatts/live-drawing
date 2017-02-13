@@ -8,23 +8,11 @@ import {DrawingService} from './drawing.service'
     styleUrls: ['./drawing.component.css']
 })
 
-export class DrawingComponent implements OnInit {
-
-    selectColor(name): string {
-        var colorNode = document.getElementsByName(name)
-        console.log(colorNode)
-        return colorNode[0].attributes.name.nodeValue
-    }
-
-    selectShape(name): string {
-        var shapeNode = document.getElementsByName(name)
-        console.log(shapeNode)
-        return shapeNode[0].attributes.name.nodeValue
-    }
+export class DrawingComponent {
 
     draw(event: click): void {
 
-        var myCanvas = document.getElementById('groupCanvas')
+        var myCanvas = document.getElementById('myCanvas')
         var ctx = myCanvas.getContext('2d')
 
         var canvasLocation = myCanvas.getBoundingClientRect()

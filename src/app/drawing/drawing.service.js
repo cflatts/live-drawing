@@ -11,12 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var DrawingService = (function () {
     function DrawingService() {
-        this.logs = [];
     }
-    DrawingService.prototype.log = function (message) {
-        this.logs.psuh(message);
-        onsole.log(message);
-    };
     DrawingService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

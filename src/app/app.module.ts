@@ -13,7 +13,7 @@ import {DrawingService} from './drawing/drawing.service'
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule ],
   declarations: [ AppComponent, HomeComponent, DrawingComponent, LoginComponent ],
-  providers: [DrawingService]
+  providers: [DrawingService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
