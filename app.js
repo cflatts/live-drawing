@@ -1,14 +1,10 @@
-var express = require('express')
+import * as express from ('express')
 var app = express()
-var server = require('http').Server(app)
-var io = require('socket.io')(server)
 
-server.listen(3000)
+app.listen(3000)
 
 app.use(express.static('src'))
 
-app.get('/', function(req, res) {
-    console.log(req)
-    console.log(res)
-    res.sendFile( __dirname + '/src/app/index.html')
-})
+// app.get('/', function(req, res) {
+//     res.sendFile( __dirname + '/src/app/index.html')
+// })
