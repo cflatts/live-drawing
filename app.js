@@ -7,7 +7,7 @@ var PORT = 3000
 server.listen(3000)
 
 app.listen(PORT)
-app.use(express.static('src'))
+app.use(express.static(path.join(__dirname, 'src')))
 
 app.engine('html', './src/index.html')
 
