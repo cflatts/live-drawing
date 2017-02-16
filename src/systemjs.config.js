@@ -5,7 +5,7 @@
 var System = require('systemjs')
 
 (function (global) {
-  System.config({
+  SystemJS.config({
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
