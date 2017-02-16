@@ -8,5 +8,7 @@ server.listen(3000)
 app.use(express.static('src'))
 
 app.get('/', function(req, res) {
+    console.log(req)
+    console.log(res)
     res.sendFile( __dirname + '/src/app/index.html')
 })
