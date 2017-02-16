@@ -17,5 +17,12 @@ app.set('view engine', 'ejs')
 console.log('listening on port:' + PORT)
 
 app.get('/', function(req, res) {
-   res.sendFile( __dirname + '/src/app/index.html')
+   res.sendFile( __dirname + '/src/index.html')
+})
+
+io.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' })
+  socket.on('my other event', function (data) {
+    console.log(data)
+  });
 })

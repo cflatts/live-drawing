@@ -2,10 +2,9 @@
  * System configuration for Angular samples
  * Adjust as necessary for your application needs.
  */
-var System = require('systemjs')
 
 (function (global) {
-  SystemJS.config({
+  System.config({
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
