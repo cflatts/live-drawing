@@ -3,7 +3,7 @@
  * Adjust as necessary for your application needs.
  */
 (function (global) {
-  SystemJS.config({
+  System.config({
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
