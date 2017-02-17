@@ -1,18 +1,21 @@
-var express = require('express')
-var app = express()
-var path = require('path')
-var renderFile = require('ejs').renderFile
-var server = require('http').Server(app)
-var io = require('socket.io')(server)
+const express = require('express')
+const app = express()
+const path = require('path')
+const renderFile = require('ejs').renderFile
 
-var PORT = 3000
-server.listen(PORT)
+// const io = require('socket.io')(app)
+const connectToDB = require('./data/db.js').connectToDB
 
-// app.listen(PORT)
+
+const PORT = 3000
+app.listen(PORT)
+
 app.use(express.static('src'))
 
-// app.set('html', renderFile)
-// app.set('view engine', 'ejs')
+// connectToDB('live-drawing')
+
+app.set('html', renderFile)
+app.set('view engine', 'ejs')
 
 console.log('listening on port:' + PORT)
 
