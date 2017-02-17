@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {DrawingService} from './drawing.service'
+import {Dot} from './dot'
 
 @Component({
     moduleId: module.id,
@@ -8,8 +9,7 @@ import {DrawingService} from './drawing.service'
     styleUrls: ['./drawing.component.css']
 })
 
-export class DrawingComponent {
-
+export class DrawingComponent implements OnInit {
 
 }
 
