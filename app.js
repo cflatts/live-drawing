@@ -10,7 +10,7 @@ const connectToDB = require('./data/db.js').connectToDB
 const PORT = 3000
 app.listen(PORT)
 
-app.use(express.static('src'))
+app.use(express.static('dist'))
 
 // connectToDB('live-drawing')
 
