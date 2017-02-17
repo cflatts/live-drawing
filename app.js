@@ -1,28 +1,35 @@
-var express = require('express')
-var app = express()
-var path = require('path')
-var renderFile = require('ejs').renderFile
-var server = require('http').Server(app)
-var io = require('socket.io')(server)
+const express = require('express')
+const app = express()
+const path = require('path')
+const renderFile = require('ejs').renderFile
 
-var PORT = 3000
-server.listen(PORT)
+// const io = require('socket.io')(app)
+const connectToDB = require('./data/db.js').connectToDB
 
-// app.listen(PORT)
-app.use(express.static(path.join(__dirname, 'src')))
+
+const PORT = 3000
+app.listen(PORT)
+
+app.use(express.static('dist'))
+
+// connectToDB('live-drawing')
+
 
 app.set('html', renderFile)
 app.set('view engine', 'ejs')
 
 console.log('listening on port:' + PORT)
 
-app.get('/', function(req, res) {
-   res.sendFile( __dirname + '/src/index.html')
-})
+// app.get('/home', function(req, res) {
+//     console.log(req)
+//     console.log(res)
+//    res.sendFile( __dirname + '/src/index.html')
+// })
 
-io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' })
-  socket.on('my other event', function (data) {
-    console.log(data)
-  })
-})
+// io.on('connection', function (socket) {
+//   socket.emit('news', { hello: 'world' })
+//   socket.on('my other event', function (data) {
+//     console.log(data)
+//   });
+// })
+

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {DrawingService} from './drawing.service'
+import {Dot} from './dot'
 
 @Component({
     moduleId: module.id,
@@ -8,20 +9,8 @@ import {DrawingService} from './drawing.service'
     styleUrls: ['./drawing.component.css']
 })
 
-export class DrawingComponent {
+export class DrawingComponent implements OnInit {
 
-    draw(event: any): void {
-
-        var myCanvas : any = document.getElementById('myCanvas')
-        var ctx = myCanvas.getContext('2d')
-
-        var canvasLocation = myCanvas.getBoundingClientRect()
-
-        const x = event.clientX - canvasLocation.left
-        const y = event.clientY - canvasLocation.top
-
-        ctx.fillRect(x, y, 5, 5)
-    }
 }
 
 
