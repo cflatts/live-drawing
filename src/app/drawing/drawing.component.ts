@@ -9,7 +9,7 @@ import {Dot} from './dot'
     styleUrls: ['./drawing.component.css']
 })
 
-export class DrawingComponent implements OnInit {
+export class DrawingComponent {
 
 }
 
