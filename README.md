@@ -12,5 +12,5 @@ Run the environment
 -------------------
 
 1. In one terminal window run <code>mongod</code>
-2. In another terminal window run <code>node app.js</code>
+2. In another terminal window run <code>npm run server</code>
 

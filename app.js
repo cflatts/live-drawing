@@ -4,7 +4,7 @@ const path = require('path')
 const renderFile = require('ejs').renderFile
 
 // const io = require('socket.io')(app)
-const connectToDB = require('./data/db.js').connectToDB
+
 
 
 const PORT = 3000
@@ -12,7 +12,6 @@ app.listen(PORT)
 
 app.use(express.static('dist'))
 
-// connectToDB('live-drawing')
 
 
 app.set('html', renderFile)
