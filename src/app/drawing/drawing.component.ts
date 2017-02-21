@@ -11,6 +11,7 @@ import {Dot} from './dot'
 
 export class DrawingComponent {
 
+    constructor(private service: DrawingService) { }
 }
 
 
